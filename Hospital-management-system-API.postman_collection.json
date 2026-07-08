@@ -1,0 +1,131 @@
+{
+  "info": {
+    "name": "Hospital Management System API",
+    "_postman_id": "c8a4d1d0-7a12-4f34-8b33-123456789001",
+    "description": "Hospital Management System CRUD APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [],
+  "item": [
+    {
+      "name": "Patients",
+      "item": [
+        {
+          "name": "Get All Patients",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/patients"
+          }
+        },
+        {
+          "name": "Get Patient By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/patients/1"
+          }
+        },
+        {
+          "name": "Add Patient",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"Rahul\",\n  \"age\":30,\n  \"gender\":\"Male\",\n  \"disease\":\"Fever\",\n  \"doctor\":\"Dr. Sharma\"\n}"
+            },
+            "url": "{{baseUrl}}/patients"
+          }
+        },
+        {
+          "name": "Update Patient",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"Rahul Kumar\",\n  \"age\":31,\n  \"gender\":\"Male\",\n  \"disease\":\"Diabetes\",\n  \"doctor\":\"Dr. Sharma\"\n}"
+            },
+            "url": "{{baseUrl}}/patients/1"
+          }
+        },
+        {
+          "name": "Delete Patient",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/patients/1"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Doctors",
+      "item": [
+        {
+          "name": "Get All Doctors",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/doctors"
+          }
+        },
+        {
+          "name": "Get Doctor By ID",
+          "request": {
+            "method": "GET",
+            "url": "{{baseUrl}}/doctors/1"
+          }
+        },
+        {
+          "name": "Add Doctor",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"Dr. Sharma\",\n  \"specialization\":\"Cardiologist\",\n  \"experience\":12\n}"
+            },
+            "url": "{{baseUrl}}/doctors"
+          }
+        },
+        {
+          "name": "Update Doctor",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"Dr. Sharma\",\n  \"specialization\":\"Neurologist\",\n  \"experience\":15\n}"
+            },
+            "url": "{{baseUrl}}/doctors/1"
+          }
+        },
+        {
+          "name": "Delete Doctor",
+          "request": {
+            "method": "DELETE",
+            "url": "{{baseUrl}}/doctors/1"
+          }
+        }
+      ]
+    }
+  ]
+}
